@@ -70,12 +70,12 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/weather', (req, res) => {
-    res.send('<h1>Weather in Cat Lai</h1>'/*, [{
-        location: 'Carlisle',
-        temp: 46
-    }] */)
-})
+// app.get('/weather', (req, res) => {
+//     res.send('<h1>Weather in Cat Lai</h1>'/*, [{
+//         location: 'Carlisle',
+//         temp: 46
+//     }] */)
+// })
 
 app.listen(3000, () => {
     console.log('Server is up and running')
