@@ -19,6 +19,6 @@
   "dependencies": {
     "express": "*",
     "hbs": "*",
-    "request": "*"
+    "postman-request": "*"
   }
 }
