@@ -2,7 +2,9 @@ const express = require('express')
 const path = require('path')
 const geocode = require('./utils/geolocation.js')
 const weather = require('./utils/weather.js')
+
 const app = express()
+const port = process.env.PORT || 3000
 
 // DEFINE PATHS
 const publicDirectoryPath = path.join(__dirname, '/public')
@@ -59,9 +61,9 @@ app.get('/weather', (req, res) => {
         })
     }
     geocode(req.query.address, (error, {long, lat, location} = {}) => {
-        if (error) res.send({error}) //console.log(error)
+        if (error) return res.send({error}) //console.log(error)
         weather(long, lat, (error, data) => {
-            if (error) res.send({error}) //console.log(error)
+            if (error) return res.send({error}) //console.log(error)
             res.send({
                 location,
                 data
@@ -77,6 +79,6 @@ app.get('/weather', (req, res) => {
 //     }] */)
 // })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server is up and running')
 })
