@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/anthonyhvo12/nodejs-weather-server/issues"
   },
-  "homepage": "https://github.com/anthonyhvo12/nodejs-weather-server#readme"
+  "homepage": "https://github.com/anthonyhvo12/nodejs-weather-server#readme",
+  "dependencies": {
+    "express": "*",
+    "hbs": "*",
+    "request": "*"
+  }
 }
